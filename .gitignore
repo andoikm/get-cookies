@@ -1,0 +1,28 @@
+# Node modules (if you add npm in the future)
+node_modules/
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs (WebStorm, IntelliJ, PhpStorm, etc.)
+.idea/
+*.iml
+
+# macOS system files
+.DS_Store
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Build output (if you later add bundling)
+dist/
+build/
+
+# Chrome extension packaging
+*.crx
+*.pem
+*.zip

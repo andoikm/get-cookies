@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "no-var": "error",
+    "prefer-const": ["error", { "destructuring": "all" }],
+    "curly": ["error", "all"],
+    "eqeqeq": ["error", "always"],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-redeclare": "error",
+    "no-duplicate-imports": "error",
+    "no-extra-semi": "error",
+    "no-unreachable": "error",
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "consistent-return": "warn"
+  }
+} 

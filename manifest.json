@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Inspector",
+  "version": "1.0",
+  "description": "Inspect, view, and copy cookies from the current site.",
+  "permissions": ["cookies", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "./index.html"
+  },
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "background": {
+    "service_worker": "dist/background.bundle.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.bundle.js"]
+    }
+  ]
+}

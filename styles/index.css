@@ -1,0 +1,222 @@
+/* Theme variables */
+:root {
+    --bg: #f9f9f9;
+    --fg: #222;
+    --header-bg: #fff;
+    --row-bg: #fff;
+    --row-border: #ddd;
+    --row-hover: #eef;
+    --btn-bg: #f3f3f3;
+    --btn-hover: #e0eaff;
+    --btn-fg: #333;
+    --toast-bg: #d32f2f;
+    --toast-fg: #fff;
+    --toast-success-bg: #388e3c;
+    --toast-error-bg: #d32f2f;
+    --value-bg: #f5f5f5;
+    --value-fg: #333;
+    --textarea-bg: #fff;
+    --textarea-fg: #222;
+    --textarea-border: #bbb;
+}
+[data-theme="dark"] {
+    --bg: #181a1b;
+    --fg: #eee;
+    --header-bg: #23272a;
+    --row-bg: #23272a;
+    --row-border: #555;
+    --row-hover: #2c3136;
+    --btn-bg: #23272a;
+    --btn-hover: #333a40;
+    --btn-fg: #fff;
+    --toast-bg: #b71c1c;
+    --toast-fg: #fff;
+    --toast-success-bg: #388e3c;
+    --toast-error-bg: #b71c1c;
+    --value-bg: #23272a;
+    --value-fg: #eee;
+    --textarea-bg: #181a1b;
+    --textarea-fg: #eee;
+    --textarea-border: #666;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    width: 300px;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+#cookie-list {
+    margin-top: 10px;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--header-bg);
+    margin-bottom: 8px;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--fg);
+}
+
+.theme-toggle-btn {
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    border: 1px solid var(--row-border);
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.theme-toggle-btn:hover {
+    background: var(--btn-hover);
+}
+
+.cookie {
+    background: white;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.cookie:hover {
+    background: #eef;
+}
+
+
+.cookie-list .cookie {
+    word-break: break-all;
+}
+
+.cookie-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 5px;
+    background: var(--row-bg);
+    border: 1px solid var(--row-border);
+    border-radius: 4px;
+    padding: 6px 4px;
+    gap: 0;
+}
+
+.cookie-row-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cookie-row-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cookie-row > div, .cookie-row > span, .cookie-row > button {
+    margin-bottom: 0;
+}
+
+.cookie-value {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 8px;
+}
+
+.cookie-row button,
+.copy-btn, .delete-btn, .edit-btn {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--row-border);
+    border-radius: 3px;
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cookie-row button:hover,
+.copy-btn:hover, .delete-btn:hover, .edit-btn:hover {
+    background: var(--btn-hover);
+}
+
+.copy-btn svg, .delete-btn svg, .edit-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.expand-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 6px;
+    color: var(--btn-fg);
+    padding: 0 4px;
+}
+
+.cookie-key {
+    flex: 1 1 auto;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.cookie-value-full {
+    width: 100%;
+    margin-top: 4px;
+    background: var(--value-bg);
+    border-radius: 3px;
+    padding: 4px 6px;
+    font-size: 12px;
+    word-break: break-all;
+    color: var(--value-fg);
+}
+
+.edit-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 13px;
+    padding: 4px 6px;
+    resize: vertical;
+    margin: 0;
+    border: 1px solid var(--textarea-border);
+    border-radius: 3px;
+    background: var(--textarea-bg);
+    color: var(--textarea-fg);
+}
+
+#cookie-toast {
+    background: var(--toast-bg);
+    color: var(--toast-fg);
+}
